@@ -1,7 +1,7 @@
 import { useSelector } from "react-redux";
 import { RootState } from "../redux/store";
 import { useDispatch } from "react-redux";
-import { addTask, setCompleted } from "../redux/toDosSlice";
+import { addTask, deleteTask, setCompleted } from "../redux/toDosSlice";
 import { useRef } from "react";
 
 const ToDos = () => {
@@ -18,6 +18,7 @@ const ToDos = () => {
     dispatch(addTask({ text: theToDo }));
     toDoRef.current!.value = "";
   };
+
 
   // console.log({ tasks });
   return (
@@ -39,6 +40,13 @@ const ToDos = () => {
               }}
             >
               completed
+            </button>
+            <button
+              onClick={() => {
+                dispatch(deleteTask({ id: t.id }));
+              }}
+            >
+              delete
             </button>
           </li>
         ))}

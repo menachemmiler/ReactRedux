@@ -1,5 +1,6 @@
 import { createSlice, PayloadAction } from "@reduxjs/toolkit";
-import { v4 } from "uuid";
+import { json } from "react-router-dom";
+import { v4 as uuidv4 } from "uuid";
 
 interface newTaskDTO {
   text: string;
@@ -30,12 +31,14 @@ export const toDoSlice = createSlice({
   initialState,
   reducers: {
     addTask: (state, actions: PayloadAction<newTaskDTO>) => {
-      let newID: string = v4();
+      let newID: string = uuidv4();
+      // console.log("Generated UUID:", newID);
       state.tasks.push({
         completed: false,
         text: actions.payload.text,
         id: newID,
       });
+      // console.log("state.tasks= ", JSON.stringify(state.tasks));
     },
     setCompleted: (state, actions: PayloadAction<{ id: string }>) => {
       const toUpdate = state.tasks.find((t) => t.id == actions.payload.id);
@@ -51,7 +54,7 @@ export const toDoSlice = createSlice({
 });
 
 //ייצוא הפעולות של הסטייט
-export const { addTask, setCompleted , deleteTask} = toDoSlice.actions;
+export const { addTask, setCompleted, deleteTask } = toDoSlice.actions;
 
 // ייצוא ה-reducer לשימוש ב-store
 export default toDoSlice.reducer;
