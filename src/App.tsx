@@ -20,6 +20,7 @@ function App() {
             <Route path="/counter" element={<Counter />} />
             <Route path="/user" element={<User />} />
             <Route path="/toDos" element={<ToDos />} />
+            <Route path="/test" element={<div>test</div>}/>
           </Routes>
         </div>
       </div>
