@@ -31,11 +31,23 @@ export const cartSlice = createSlice({
       }
       state.total = totalCart(state.items);
     },
+    incProduct: (state, actions: PayloadAction<{ id: string }>) => {
+      const itemId = actions.payload.id;
+      const ifExist = state.items.find((i) => i.id == itemId);
+      if (ifExist) {
+        ifExist.quantity > 1
+          ? (ifExist.quantity -= 1)
+          : (state.items = state.items.filter((i) => i.id !== itemId));
+      } else {
+        alert("this item is alredy not in your cart!");
+      }
+      state.total = totalCart(state.items);
+    },
   },
 });
 
 //ייצוא הפעולות של הסטייט
-export const { addProduct } = cartSlice.actions;
+export const { addProduct, incProduct } = cartSlice.actions;
 
 // ייצוא ה-reducer לשימוש ב-store
 // export default counterSlice;

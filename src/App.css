@@ -111,7 +111,7 @@ button {
     overflow: auto; /* מאפשר גלילה אופקית */
     border: solid 1px black;
     background-color: white;
-    .item {
+    .shopeitem {
       min-width: 20%;
       height: 90%;
       display: flex;
@@ -141,7 +141,7 @@ button {
     flex-wrap: wrap;
     border: solid 1px black;
     background-color: white;
-    .item {
+    .cartitem {
       min-width: 30%;
       min-height: 20%;
       display: flex;
