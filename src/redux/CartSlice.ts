@@ -43,11 +43,15 @@ export const cartSlice = createSlice({
       }
       state.total = totalCart(state.items);
     },
+    clearCart: (state) => {
+      state.items = [];
+      state.total = 0;
+    },
   },
 });
 
 //ייצוא הפעולות של הסטייט
-export const { addProduct, incProduct } = cartSlice.actions;
+export const { addProduct, incProduct, clearCart } = cartSlice.actions;
 
 // ייצוא ה-reducer לשימוש ב-store
 // export default counterSlice;

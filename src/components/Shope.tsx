@@ -3,9 +3,13 @@ import { RootState } from "../redux/store";
 import { products } from "../utils/shope";
 import Shopeitem from "./Shopeitem";
 import Cartitem from "./Cartitem";
+import { useDispatch } from "react-redux";
+import { clearCart } from "../redux/CartSlice";
 
 const Shope = () => {
   const { items, total } = useSelector((state: RootState) => state.shope);
+
+  const dispatch = useDispatch(); //מחלקה שמאפשרת לבצע שינויים בסטייט
 
   return (
     <div className="shope">
@@ -27,7 +31,11 @@ const Shope = () => {
             <Cartitem key={t.id} cart={t} />
           ))}
         </div>
+      </div>
+
+      <div className="buttom">
         <h3>total: {total}</h3>
+        <button onClick={() => {dispatch(clearCart())}}>clear cart</button>
       </div>
     </div>
   );
