@@ -7,8 +7,6 @@ interface Props {
 }
 
 const Shopeitem = ({ cart }: Props) => {
-  console.log({ cart });
-
   const dispatch = useDispatch(); //מחלקה שמאפשרת לבצע שינויים בסטייט
 
   return (
