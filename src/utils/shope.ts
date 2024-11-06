@@ -26,6 +26,24 @@ export const products: Cart[] = [
     price: 3,
     quantity: 1,
   },
+  {
+    id: "5",
+    name: "csffsd",
+    price: 3,
+    quantity: 1,
+  },
+  {
+    id: "6",
+    name: "ffff",
+    price: 3,
+    quantity: 1,
+  },
+  {
+    id: "7",
+    name: "rrrr",
+    price: 3,
+    quantity: 1,
+  },
 ];
 
 export const totalCart = (items: Cart[]): number => {

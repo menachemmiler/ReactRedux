@@ -88,6 +88,67 @@ a {
   width: 15%;
 }
 
-button{
+button {
   padding: 10px;
+}
+
+.shope {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.products {
+  width: 100%;
+  height: 40%;
+  display: flex;
+  flex-direction: column;
+  .main {
+    width: 100%;
+    display: flex;
+    gap: 1%;
+    overflow: auto; /* מאפשר גלילה אופקית */
+    border: solid 1px black;
+    background-color: white;
+    .item {
+      min-width: 20%;
+      height: 90%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 4%;
+      background-color: red;
+    }
+  }
+}
+
+.title {
+  width: 100%;
+  height: 10%;
+  text-align: center;
+  background-color: rgb(179, 179, 179);
+}
+
+.cart {
+  width: 100%;
+  height: 50%;
+  .main {
+    width: 100%;
+    display: flex;
+    gap: 1%;
+    overflow: auto; /* מאפשר גלילה אופקית */
+    flex-wrap: wrap;
+    border: solid 1px black;
+    background-color: white;
+    .item {
+      min-width: 30%;
+      min-height: 20%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 4%;
+      background-color: red;
+    }
+  }
 }
