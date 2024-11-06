@@ -7,6 +7,7 @@ import NavBar from "./components/NavBar";
 import { Route, Routes } from "react-router-dom";
 import ToDos from "./components/ToDos";
 import Home from "./pages/Home";
+import Shope from "./components/Shope";
 
 function App() {
   return (
@@ -20,6 +21,7 @@ function App() {
             <Route path="/ReactRedux/counter" element={<Counter />} />
             <Route path="/ReactRedux/user" element={<User />} />
             <Route path="/ReactRedux/toDos" element={<ToDos />} />
+            <Route path="/ReactRedux/shope" element={<Shope />} />
           </Routes>
         </div>
       </div>

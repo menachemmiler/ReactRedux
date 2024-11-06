@@ -6,6 +6,7 @@ const NavBar = () => {
       <NavLink to={"/ReactRedux/counter"}>counter</NavLink>
       <NavLink to={"/ReactRedux/user"}>user</NavLink>
       <NavLink to={"/ReactRedux/todos"}>to dos</NavLink>
+      <NavLink to={"/ReactRedux/shope"}>shope</NavLink>
     </div>
   );
 };
