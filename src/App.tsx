@@ -17,9 +17,9 @@ function App() {
         <div className="main">
           <Routes>
             <Route index element={<Home />} />
-            <Route path="/counter" element={<Counter />} />
-            <Route path="/user" element={<User />} />
-            <Route path="/toDos" element={<ToDos />} />
+            <Route path="/ReactRedux/counter" element={<Counter />} />
+            <Route path="/ReactRedux/user" element={<User />} />
+            <Route path="/ReactRedux/toDos" element={<ToDos />} />
           </Routes>
         </div>
       </div>

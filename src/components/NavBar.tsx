@@ -3,9 +3,9 @@ import { NavLink } from "react-router-dom";
 const NavBar = () => {
   return (
     <div className="navbar">
-      <NavLink to={"/counter"}>counter</NavLink>
-      <NavLink to={"/user"}>user</NavLink>
-      <NavLink to={"/todos"}>to dos</NavLink>
+      <NavLink to={"/ReactRedux/counter"}>counter</NavLink>
+      <NavLink to={"/ReactRedux/user"}>user</NavLink>
+      <NavLink to={"/ReactRedux/todos"}>to dos</NavLink>
     </div>
   );
 };
