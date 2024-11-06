@@ -1,5 +1,4 @@
 import { createSlice, PayloadAction } from "@reduxjs/toolkit";
-import { json } from "react-router-dom";
 import { v4 as uuidv4 } from "uuid";
 
 interface newTaskDTO {
